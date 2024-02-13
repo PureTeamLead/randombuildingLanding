@@ -1,0 +1,15 @@
+{
+	"name": "buildproject",
+	"version": "1.0.0",
+	"description": "starting sass",
+	"main": "index.html",
+	"scripts": {
+		"sass:watch": "sass --style=expanded --watch styles:dist"
+	},
+	"author": "7Max",
+	"license": "ISC",
+	"dependencies": {
+		"parcel": "^2.11.0",
+		"sass": "^1.70.0"
+	}
+}
