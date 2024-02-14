@@ -14,36 +14,126 @@
 		<title>Berksho</title>
 	</head>
 	<body>
-		<header class="header">
-			<div class="container">
-				<div class="header__content">
-					<div class="header__logo">
+		<header class="header" aria-label="header">
+			<div class="container" aria-label="container">
+				<div class="header__content" aria-label="content of header">
+					<a href="#" class="header__logo" aria-label="logotype">
 						<svg class="logo-spr">
 							<use href="/assets/sprites.svg#logotype"></use>
 						</svg>
-					</div>
+					</a>
 
 					<!-- Make burger menu -->
-					<div class="burger-menu">
-						<input type="checkbox" />
+					<div class="burger-menu" aria-label="mobile menu">
+						<label for="toggler" aria-label="open-close mobile navigation">
+							<div class="mobnav-box" aria-label="mobile navigation button">
+								<svg class="mobile-nav-burger">
+									<use href="/assets/sprites.svg#open-mobmenu"></use>
+								</svg>
+							</div>
+						</label>
+
+						<input type="checkbox" id="toggler" class="navigation-toggler" />
+
+						<nav class="mobnav" aria-label="navigation bar">
+							<ul class="mobnav__list" aria-label="mobile navigation list">
+								<li aria-label="mobile navigation part">
+									<a
+										class="mobnav__link"
+										href="#"
+										aria-label="mobile navigation link"
+										>Home</a
+									>
+								</li>
+								<li aria-label="mobile navigation part">
+									<a
+										class="mobnav__link"
+										href="#"
+										aria-label="mobile navigation link"
+										>Projects</a
+									>
+								</li>
+								<li aria-label="mobile navigation part">
+									<a
+										class="mobnav__link"
+										href="#"
+										aria-label="mobile navigation link"
+										>Work Offers</a
+									>
+								</li>
+								<li aria-label="mobile navigation part">
+									<a
+										class="mobnav__link"
+										href="#"
+										aria-label="mobile navigation link"
+										>FAQ</a
+									>
+								</li>
+								<li aria-label="mobile navigation part">
+									<a
+										class="mobnav__link"
+										href="#"
+										aria-label="mobile navigation link"
+										>Reviews</a
+									>
+								</li>
+								<li aria-label="mobile navigation part">
+									<a
+										class="mobnav__link"
+										href="#"
+										aria-label="mobile navigation link"
+										>Contacts</a
+									>
+								</li>
+							</ul>
+
+							<label for="toggler" aria-label="close mobile navigation menu">
+								<svg class="mobnav__close" aria-label="close-icon">
+									<use href="./assets/sprites.svg#cross-icon"></use>
+								</svg>
+							</label>
+						</nav>
 					</div>
 				</div>
 			</div>
 		</header>
 
-		<main class="main">
-			<section class="head">
-				<div class="container">
-					<div class="head__content">
-						<h1 class="head__content-header">
+		<main class="main" aria-label="main content">
+			<section class="head" aria-label="head section">
+				<div class="container" aria-label="container">
+					<div class="head__content" aria-label="content of the section">
+						<h1 class="head__content-header" aria-label="head of the section">
 							РЕАЛИЗУЕМ КРУПНЕЙШИЕ ПРОЕКТЫ В РОССИИ
 						</h1>
-						<p class="head__content-desc">
+						<p class="head__content-desc" aria-label="paragraph of the section">
 							стадионы, газопроводы, мосты, дамбы
 						</p>
 					</div>
 				</div>
 			</section>
+
+			<div class="random-block" aria-label="Years of  work block">
+				<div class="block" aria-label="block of info">
+					<h4 class="block__header" aria-label="header of the block">26</h4>
+					<span class="block__span" aria-label="block span">ЛЕТ</span>
+					<p class="block__paragraph" aria-label="block paragragh">на рынке</p>
+				</div>
+				<div class="block" aria-label="block of info">
+					<h4 class="block__header" aria-label="header of the block">26</h4>
+					<span class="block__span" aria-label="block span">ЛЕТ</span>
+					<p class="block__paragraph" aria-label="block paragragh">на рынке</p>
+				</div>
+				<div class="block" aria-label="block of info">
+					<h4 class="block__header" aria-label="header of the block">26</h4>
+					<span class="block__span" aria-label="block span">ЛЕТ</span>
+					<p class="block__paragraph" aria-label="block paragragh">на рынке</p>
+				</div>
+				<div class="block" aria-label="block of info">
+					<h4 class="block__header" aria-label="header of the block">26</h4>
+					<span class="block__span" aria-label="block span">ЛЕТ</span>
+					<p class="block__paragraph" aria-label="block paragragh">на рынке</p>
+				</div>
+			</div>
 		</main>
 
 		<footer class="footer"></footer>
