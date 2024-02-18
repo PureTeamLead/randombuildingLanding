@@ -3,24 +3,46 @@
 
 .thebar {
 	background: v.$font-orange;
-	height: 200px;
+	height: 100%;
 	padding: 45px 0;
+
+	@media (max-width: 400px) {
+		text-align: center;
+	}
 
 	&__content {
 		@include m.flexbox(space-between, center, 0);
+
+		@media (max-width: 610px) {
+			@include m.flexbox(start, center, 30px);
+			flex-direction: column;
+		}
 
 		.content__text {
 			.text__title {
 				@include m.text(48px, 700, v.$white);
 			}
 
+			@media (max-width: 820px) {
+				.text__title {
+					font-size: 34px;
+				}
+			}
+
 			.text__paragraph {
 				@include m.text(24px, 700, v.$white);
+			}
+
+			@media (max-width: 820px) {
+				.text__paragraph {
+					font-size: 16px;
+				}
 			}
 		}
 
 		.content__button {
 			.btn {
+				border-radius: 30px;
 				transition: all 0.5s;
 
 				i {
@@ -35,7 +57,6 @@
 
 			.btn:hover {
 				scale: 1.1;
-				border-radius: 30px;
 			}
 		}
 	}

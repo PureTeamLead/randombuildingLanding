@@ -22,6 +22,7 @@
 			.example {
 				@include m.flexbox(space-between, start);
 				flex-direction: column;
+				transition: all 0.3s ease;
 
 				&__image {
 					img {
