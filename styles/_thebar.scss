@@ -1,0 +1,42 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.thebar {
+	background: v.$font-orange;
+	height: 200px;
+	padding: 45px 0;
+
+	&__content {
+		@include m.flexbox(space-between, center, 0);
+
+		.content__text {
+			.text__title {
+				@include m.text(48px, 700, v.$white);
+			}
+
+			.text__paragraph {
+				@include m.text(24px, 700, v.$white);
+			}
+		}
+
+		.content__button {
+			.btn {
+				transition: all 0.5s;
+
+				i {
+					font-size: 22px;
+				}
+
+				&__text {
+					@include m.text(14px, 500, v.$black);
+					font-family: Oswald, sans-serif;
+				}
+			}
+
+			.btn:hover {
+				scale: 1.1;
+				border-radius: 30px;
+			}
+		}
+	}
+}

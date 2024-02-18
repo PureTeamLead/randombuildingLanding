@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 * {
 	box-sizing: border-box;
@@ -43,4 +44,10 @@ ul {
 
 li {
 	list-style-type: none;
+}
+
+.btn {
+	padding: 14px 30px;
+	border: none;
+	@include m.flexbox(start, center, 15px);
 }

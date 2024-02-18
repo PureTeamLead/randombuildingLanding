@@ -1,0 +1,44 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.work-offers {
+	background-color: v.$white;
+	padding: 150px 0;
+
+	&__wrapper {
+		height: 640px;
+		@include m.flexbox(space-between, center, 0);
+		flex-direction: column;
+
+		.work-offers__title {
+			@include m.text(40px, 700, v.$black);
+		}
+
+		.work-offers__grid-container {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			gap: 30px;
+
+			.work-offers__grid-element {
+				height: 250px;
+				width: 350px;
+				padding: 60px 90px;
+				text-wrap: wrap;
+				@include m.flexbox(space-between, center, 0);
+				flex-direction: column;
+				text-align: center;
+				background-color: v.$back-card;
+
+				i {
+					font-size: 60px;
+					color: v.$font-orange;
+				}
+
+				.grid-element__title {
+					@include m.text(18px, 600, v.$black);
+				}
+			}
+		}
+	}
+}
