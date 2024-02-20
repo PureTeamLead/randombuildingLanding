@@ -14,8 +14,7 @@
 		@include m.flexbox(space-between, center, 0);
 
 		@media (max-width: 610px) {
-			@include m.flexbox(start, center, 30px);
-			flex-direction: column;
+			@include m.flexbox(start, center, 30px, column);
 		}
 
 		.content__text {
@@ -52,6 +51,7 @@
 				&__text {
 					@include m.text(14px, 500, v.$black);
 					font-family: Oswald, sans-serif;
+					text-wrap: nowrap;
 				}
 			}
 

@@ -1,8 +1,9 @@
-@mixin flexbox($just, $align, $gap: 0) {
+@mixin flexbox($just, $align, $gap: 0, $direction: row) {
 	display: flex;
 	justify-content: $just;
 	align-items: $align;
 	gap: $gap;
+	flex-direction: $direction;
 }
 
 @mixin text($fontsize, $fontweight, $fontcolor) {

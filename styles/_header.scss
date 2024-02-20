@@ -14,8 +14,7 @@
 }
 
 .head__content {
-	@include m.flexbox(center, center, 20px);
-	flex-direction: column;
+	@include m.flexbox(center, center, 20px, column);
 	height: 540px;
 	max-width: 800px;
 	margin: 0 auto;
@@ -44,8 +43,7 @@
 	padding: 40px 70px 30px;
 
 	.block {
-		@include m.flexbox(space-around, center, 10px);
-		flex-direction: column;
+		@include m.flexbox(space-around, center, 10px, column);
 		background-color: transparent;
 
 		.block__header {
@@ -107,8 +105,7 @@
 	}
 
 	.mobnav__list {
-		@include m.flexbox(start, end, 35px);
-		flex-direction: column;
+		@include m.flexbox(start, end, 35px, column);
 
 		.mobnav__link {
 			@include m.text(26px, 700, v.$black);

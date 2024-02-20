@@ -1,41 +1,54 @@
 @use 'variables' as v;
 @use 'mixins' as m;
 
-.reviews {
-	padding: 150px 0;
+.reviews-section {
+	padding: 150px 5px;
 	background-color: v.$white;
 
-	&__title {
-		text-align: center;
-		@include m.text(36px, 600, v.$black);
-		margin: 0 0 50px 0;
-	}
+	.reviews {
+		@include m.flexbox(start, center, 60px, column);
 
-	&__questions {
-		@include m.flexbox(start, start, 40px);
-		flex-direction: column;
+		&__title {
+			@include m.text(34px, 500, v.$black);
+			text-transform: uppercase;
+			margin: 0;
+		}
 
-		.question {
-			@include m.flexbox(start, start, 30px);
-			flex-direction: column;
+		&__content {
+			@include m.flexbox(space-between, center, 30px, row);
 
-			&__title {
-				@include m.flexbox(start, center, 15px);
-				cursor: pointer;
+			.figure {
+				@include m.flexbox(start, start, 30px, column);
 
-				i {
-					color: v.$font-orange;
+				// MAKE PADDINGS WORK CORRECTLY
+
+				&__wrapper {
+					padding: 80px, 30px, 40px;
+					@include m.flexbox(start, start, 12px, column);
+					height: 260px;
+					width: 350px;
+					background-color: v.$back-card;
+
+					i {
+						font-size: 44px;
+						color: v.$font-orange;
+						width: 40px;
+					}
+
+					.figure__description {
+						@include m.text(14px, 400, v.$font-grey);
+					}
 				}
 
-				.title__direct {
-					@include m.text(24px, 500, v.$font-orange);
-					text-wrap: nowrap;
-				}
-			}
+				&__name-tag {
+					.figure__name {
+						@include m.text(22px, 700, v.$black);
 
-			&__description {
-				max-width: 730px;
-				@include m.text(16px, 400, v.$font-grey);
+						span {
+							color: v.$font-orange;
+						}
+					}
+				}
 			}
 		}
 	}

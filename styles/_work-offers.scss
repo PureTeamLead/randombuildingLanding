@@ -7,8 +7,7 @@
 
 	&__wrapper {
 		height: 640px;
-		@include m.flexbox(space-between, center, 0);
-		flex-direction: column;
+		@include m.flexbox(space-between, center, 0, column);
 
 		.work-offers__title {
 			@include m.text(40px, 700, v.$black);
@@ -25,8 +24,7 @@
 				width: 350px;
 				padding: 60px 90px;
 				text-wrap: wrap;
-				@include m.flexbox(space-between, center, 0);
-				flex-direction: column;
+				@include m.flexbox(space-between, center, 0, column);
 				text-align: center;
 				background-color: v.$back-card;
 				border-radius: 40px;
@@ -68,8 +66,7 @@
 		}
 
 		.work-offers__grid-container {
-			@include m.flexbox(start, center, 30px);
-			flex-direction: column;
+			@include m.flexbox(start, center, 30px, column);
 		}
 	}
 }

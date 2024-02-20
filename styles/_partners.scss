@@ -1,0 +1,36 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.partners-section {
+	background-color: v.$back-section;
+	padding: 100px 5px;
+	height: 370px;
+
+	.partners {
+		@include m.flexbox(start, center, 60px, column);
+
+		&__title {
+			@include m.text(34px, 500, v.$white);
+			text-transform: uppercase;
+		}
+
+		&__wrapper {
+			@include m.flexbox(start, center, 64px);
+
+			.partner {
+				transition: all 0.32s;
+				border-radius: 10px;
+
+				img {
+					width: 170px;
+					height: 60px;
+				}
+
+				&:hover {
+					scale: 1.1;
+					background-color: v.$font-orange;
+				}
+			}
+		}
+	}
+}

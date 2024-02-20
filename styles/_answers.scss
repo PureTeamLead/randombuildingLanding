@@ -1,0 +1,40 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.reviews {
+	padding: 150px 0;
+	background-color: v.$white;
+
+	&__title {
+		text-align: center;
+		@include m.text(36px, 600, v.$black);
+		margin: 0 0 50px 0;
+	}
+
+	&__questions {
+		@include m.flexbox(start, start, 40px, column);
+
+		.question {
+			@include m.flexbox(start, start, 30px, column);
+
+			&__title {
+				@include m.flexbox(start, center, 15px);
+				cursor: pointer;
+
+				i {
+					color: v.$font-orange;
+				}
+
+				.title__direct {
+					@include m.text(24px, 500, v.$font-orange);
+					text-wrap: nowrap;
+				}
+			}
+
+			&__description {
+				max-width: 730px;
+				@include m.text(16px, 400, v.$font-grey);
+			}
+		}
+	}
+}
