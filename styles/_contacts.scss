@@ -1,0 +1,43 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.contacts-section {
+	padding: 100px 3px 150px;
+	background-color: v.$white;
+
+	.contacts {
+		height: 310px;
+		width: 100%;
+
+		&__title {
+			@include m.text(34px, 500, v.$black);
+			text-align: center;
+			margin: 0 0 60px 0;
+		}
+
+		&__content {
+			@include m.flexbox(start, center, 30px, row);
+
+			.content__block {
+				height: 200px;
+				width: 255px;
+				text-align: center;
+				@include m.flexbox(start, center, 30px, column);
+
+				i {
+					font-size: 70px;
+					color: v.$font-orange;
+				}
+
+				h3 {
+					@include m.text(22px, 500, v.$font-grey);
+				}
+
+				address {
+					@include m.text(24px, 500, v.$black);
+					font-style: normal;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.footer {
+	background-color: v.$back-section;
+	padding: 30px 0;
+
+	&__content {
+		@include m.flexbox(space-between, center, 0, row);
+
+		.content__text {
+			@include m.text(16px, 300, v.$white);
+		}
+	}
+}

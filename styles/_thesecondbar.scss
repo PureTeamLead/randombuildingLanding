@@ -1,0 +1,61 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.secondbar {
+	background-color: v.$font-orange;
+	padding: 45px 0;
+	height: 100%;
+
+	@media (max-width: 400px) {
+		text-align: center;
+	}
+
+	@media (max-width: 610px) {
+		@include m.flexbox(start, center, 30px, column);
+	}
+
+	&__content {
+		@include m.flexbox(space-between, center, 0, row);
+
+		@media (max-width: 610px) {
+			@include m.flexbox(start, center, 30px, column);
+		}
+
+		.content__desc {
+			.desc__title {
+				@include m.text(48px, 700, v.$white);
+			}
+
+			@media (max-width: 820px) {
+				.desc__title {
+					font-size: 34px;
+				}
+			}
+
+			.desc__paragraph {
+				@include m.text(24px, 700, v.$white);
+			}
+		}
+
+		.content__button {
+			.btn {
+				border-radius: 30px;
+				transition: all 0.5s;
+
+				i {
+					font-size: 22px;
+				}
+
+				&__text {
+					@include m.text(14px, 500, v.$black);
+					font-family: Oswald, sans-serif;
+					text-wrap: nowrap;
+				}
+			}
+
+			.btn:hover {
+				scale: 1.1;
+			}
+		}
+	}
+}

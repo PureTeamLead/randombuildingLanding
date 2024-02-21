@@ -20,16 +20,14 @@
 			.figure {
 				@include m.flexbox(start, start, 30px, column);
 
-				// MAKE PADDINGS WORK CORRECTLY
-
 				&__wrapper {
-					padding: 80px, 30px, 40px;
 					@include m.flexbox(start, start, 12px, column);
 					height: 260px;
 					width: 350px;
 					background-color: v.$back-card;
 
 					i {
+						margin: 20px auto 0 30px;
 						font-size: 44px;
 						color: v.$font-orange;
 						width: 40px;
@@ -37,6 +35,7 @@
 
 					.figure__description {
 						@include m.text(14px, 400, v.$font-grey);
+						margin: 0 30px 40px;
 					}
 				}
 
