@@ -4,6 +4,7 @@
 .work-offers {
 	background-color: v.$white;
 	padding: 150px 0;
+	height: 100%;
 
 	&__wrapper {
 		height: 640px;
@@ -21,7 +22,7 @@
 
 			.work-offers__grid-element {
 				height: 250px;
-				width: 350px;
+				max-width: 350px;
 				padding: 60px 90px;
 				text-wrap: wrap;
 				@include m.flexbox(space-between, center, 0, column);
@@ -50,13 +51,19 @@
 	}
 
 	@media (max-width: 1100px) {
+		& {
+			padding: 80px 0;
+		}
+
 		.work-offers__wrapper {
 			gap: 50px;
+			height: 100%;
 		}
 
 		.work-offers__grid-container {
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(3, 1fr);
+			height: 100%;
 		}
 	}
 

@@ -4,7 +4,7 @@
 .partners-section {
 	background-color: v.$back-section;
 	padding: 100px 5px;
-	height: 370px;
+	height: 100%;
 
 	.partners {
 		@include m.flexbox(start, center, 60px, column);
@@ -22,7 +22,7 @@
 				border-radius: 10px;
 
 				img {
-					width: 170px;
+					max-width: 170px;
 					height: 60px;
 				}
 
@@ -31,6 +31,17 @@
 					background-color: v.$font-orange;
 				}
 			}
+
+			@media (max-width: 1160px) {
+				& {
+					@include m.flexbox(start, center, 30px, column);
+					height: 100%;
+				}
+			}
 		}
+	}
+
+	.partners-section {
+		height: 100%;
 	}
 }

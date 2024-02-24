@@ -2,11 +2,12 @@
 @use 'mixins' as m;
 
 .reviews-section {
-	padding: 150px 5px;
+	padding: 80px 5px;
 	background-color: v.$white;
 
 	.reviews {
 		@include m.flexbox(start, center, 60px, column);
+		padding: 0;
 
 		&__title {
 			@include m.text(34px, 500, v.$black);
@@ -17,14 +18,19 @@
 		&__content {
 			@include m.flexbox(space-between, center, 30px, row);
 
+			@media (max-width: 820px) {
+				@include m.flexbox(start, center, 70px, column);
+			}
+
 			.figure {
 				@include m.flexbox(start, start, 30px, column);
 
 				&__wrapper {
 					@include m.flexbox(start, start, 12px, column);
-					height: 260px;
-					width: 350px;
+					min-height: 260px;
+					max-width: 350px;
 					background-color: v.$back-card;
+					align-self: center;
 
 					i {
 						margin: 20px auto 0 30px;
@@ -45,6 +51,13 @@
 
 						span {
 							color: v.$font-orange;
+						}
+					}
+
+					@media (max-width: 1100px) {
+						& {
+							text-align: center;
+							padding: 0 30px;
 						}
 					}
 				}
