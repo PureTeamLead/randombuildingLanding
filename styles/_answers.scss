@@ -1,7 +1,7 @@
 @use 'variables' as v;
 @use 'mixins' as m;
 
-.reviews {
+.answers {
 	padding: 150px 0;
 	background-color: v.$white;
 
@@ -16,6 +16,10 @@
 
 		.question {
 			@include m.flexbox(start, start, 30px, column);
+
+			.toggler__content-open {
+				@include m.flexbox(start, center, 16px, row);
+			}
 
 			&__title {
 				@include m.flexbox(start, center, 15px);

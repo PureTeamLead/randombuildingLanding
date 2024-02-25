@@ -15,7 +15,7 @@
 		}
 
 		&__content {
-			@include m.flexbox(start, center, 40px, row);
+			@include m.flexbox(center, center, 80px, row);
 
 			@media (max-width: 1100px) {
 				& {
@@ -46,6 +46,10 @@
 				address {
 					@include m.text(24px, 500, v.$black);
 					font-style: normal;
+				}
+
+				.email-address {
+					color: v.$font-orange;
 				}
 			}
 		}

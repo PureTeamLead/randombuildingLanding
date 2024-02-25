@@ -30,7 +30,6 @@
 						</svg>
 					</a>
 
-					<!-- Make burger menu -->
 					<div class="burger-menu" aria-label="mobile menu">
 						<label for="toggler" aria-label="open-close mobile navigation">
 							<div class="mobnav-box" aria-label="mobile navigation button">
@@ -52,7 +51,7 @@
 								<li aria-label="mobile navigation part">
 									<a
 										class="mobnav__link"
-										href="#"
+										href="#home_section"
 										aria-label="mobile navigation link"
 										>Home</a
 									>
@@ -60,7 +59,7 @@
 								<li aria-label="mobile navigation part">
 									<a
 										class="mobnav__link"
-										href="#"
+										href="#projects_section"
 										aria-label="mobile navigation link"
 										>Projects</a
 									>
@@ -68,7 +67,7 @@
 								<li aria-label="mobile navigation part">
 									<a
 										class="mobnav__link"
-										href="#"
+										href="#work-offers_section"
 										aria-label="mobile navigation link"
 										>Work Offers</a
 									>
@@ -76,7 +75,7 @@
 								<li aria-label="mobile navigation part">
 									<a
 										class="mobnav__link"
-										href="#"
+										href="#FAQ_section"
 										aria-label="mobile navigation link"
 										>FAQ</a
 									>
@@ -84,7 +83,7 @@
 								<li aria-label="mobile navigation part">
 									<a
 										class="mobnav__link"
-										href="#"
+										href="#reviews_section"
 										aria-label="mobile navigation link"
 										>Reviews</a
 									>
@@ -92,7 +91,7 @@
 								<li aria-label="mobile navigation part">
 									<a
 										class="mobnav__link"
-										href="#"
+										href="#contacts_section"
 										aria-label="mobile navigation link"
 										>Contacts</a
 									>
@@ -111,7 +110,7 @@
 		</header>
 
 		<main class="main" aria-label="main content">
-			<section class="head" aria-label="head section">
+			<section class="head" aria-label="head section" id="home_section">
 				<div class="container" aria-label="container">
 					<div class="head__content" aria-label="content of the section">
 						<h1 class="head__content-header" aria-label="head of the section">
@@ -147,7 +146,11 @@
 				</div>
 			</div>
 
-			<section class="projects" aria-label="projects section">
+			<section
+				class="projects"
+				aria-label="projects section"
+				id="projects_section"
+			>
 				<div class="container" aria-label="container">
 					<div class="projects__content" aria-label="section content">
 						<h2 class="projects__title" aria-label="title of the section">
@@ -237,7 +240,11 @@
 				</div>
 			</div>
 
-			<section class="work-offers" aria-label="work-offers section">
+			<section
+				class="work-offers"
+				aria-label="work-offers section"
+				id="work-offers_section"
+			>
 				<div class="container" aria-label="container">
 					<div class="work-offers__wrapper" aria-label="section content">
 						<h2 class="work-offers__title" aria-label="section title">
@@ -340,10 +347,10 @@
 			</section>
 
 			<!-- MAKE THE INPUT TO THE QUESTION -->
-			<section class="reviews" aria-label="Reviews section">
+			<section class="answers" aria-label="Answers section" id="FAQ_section">
 				<div class="container">
-					<h2 class="reviews__title">ОТВЕТЫ НА ВОПРОСЫ</h2>
-					<div class="reviews__questions" aria-label="block of questions">
+					<h2 class="answers__title">ОТВЕТЫ НА ВОПРОСЫ</h2>
+					<div class="answers__questions" aria-label="block of questions">
 						<div class="question" aria-label="question">
 							<div class="question__title" aria-label="question content">
 								<i class="bx bxs-right-arrow"></i>
@@ -363,22 +370,32 @@
 							</p>
 						</div>
 						<div class="question" aria-label="question">
-							<div class="question__title title" aria-label="question content">
-								<i class="bx bxs-right-arrow"></i>
-								<h3 class="title__direct" aria-label="question title">
-									РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?
-								</h3>
-							</div>
-							<p
-								class="question__description"
-								aria-label="question description"
-							>
+							<input class="text-toggler" type="checkbox" id="text-toggler" />
+							<label for="text-toggler">
+								<div class="toggler__content-open">
+									<i class="bx bxs-right-arrow"></i>
+									<h3 class="toggler__content-header">
+										РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?
+									</h3>
+								</div>
+							</label>
+
+							<p>
 								Lorem Ipsum - это текст-"рыба", часто используемый в печати и
 								вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
 								текстов на латинице с начала XVI века. В то время некий
 								безымянный печатник создал большую коллекцию размеров и форм
 								шрифтов, используя Lorem Ipsum для распечатки образцов.
 							</p>
+
+							<label for="text-toggler">
+								<div class="toggler__content-close">
+									<i class="bx bxs-down-arrow"></i>
+									<h3 class="toggler__content-header">
+										РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?
+									</h3>
+								</div>
+							</label>
 						</div>
 						<div class="question" aria-label="question">
 							<div class="question__title title" aria-label="question content">
@@ -450,8 +467,8 @@
 						<h2 class="partners__title" aria-label="title of the section">
 							наши партнеры
 						</h2>
-						<ul class="partners__wrapper" aria-label="wrapper for partners">
-							<li>
+						<ul class="partners__wrapper" aria-label="list for partners">
+							<li class="partners__wrapper-item">
 								<a href="#" class="partner" aria-label="partner logotype">
 									<img
 										class="partner-img"
@@ -460,7 +477,7 @@
 									/>
 								</a>
 							</li>
-							<li>
+							<li class="partners__wrapper-item">
 								<a href="#" class="partner" aria-label="partner logotype">
 									<img
 										class="partner-img"
@@ -469,7 +486,7 @@
 									/>
 								</a>
 							</li>
-							<li>
+							<li class="partners__wrapper-item">
 								<a href="#" class="partner" aria-label="partner logotype">
 									<img
 										class="partner-img"
@@ -478,7 +495,7 @@
 									/>
 								</a>
 							</li>
-							<li>
+							<li class="partners__wrapper-item">
 								<a href="#" class="partner" aria-label="partner logotype">
 									<img
 										class="partner-img"
@@ -487,7 +504,7 @@
 									/>
 								</a>
 							</li>
-							<li>
+							<li class="partners__wrapper-item">
 								<a href="#" class="partner" aria-label="partner logotype">
 									<img
 										class="partner-img"
@@ -501,7 +518,11 @@
 				</div>
 			</section>
 
-			<section class="reviews-section" aria-label="reviews section">
+			<section
+				class="reviews-section"
+				aria-label="reviews section"
+				id="reviews_section"
+			>
 				<div class="container" aria-label="container">
 					<div class="reviews" aria-label="reviews content">
 						<h2 class="reviews__title" aria-label="reviews title">
@@ -600,7 +621,11 @@
 				</div>
 			</div>
 
-			<section class="contacts-section" aria-label="contacts section">
+			<section
+				class="contacts-section"
+				aria-label="contacts section"
+				id="contacts_section"
+			>
 				<div class="container" aria-label="container">
 					<div class="contacts" aria-label="contacts wrapper">
 						<h2 class="contacts__title" aria-label="title of the section">
@@ -628,7 +653,7 @@
 							<div class="content__block" aria-label="block of content">
 								<i class="bx bx-envelope"></i>
 								<h3>E-MAIL:</h3>
-								<address>INFO@VIP.RU</address>
+								<address class="email-address">INFO@VIP.RU</address>
 							</div>
 						</div>
 					</div>

@@ -181,6 +181,7 @@ figure {
 .burger-menu .mobnav {
   position: fixed;
   max-width: 400px;
+  height: 100%;
   align-self: flex-start;
   z-index: 1;
   opacity: 0.8;
@@ -439,32 +440,39 @@ figure {
   grid-template-rows: repeat(2, 1fr);
 }
 
-.reviews {
+.answers {
   padding: 150px 0;
   background-color: #fff;
 }
-.reviews__title {
+.answers__title {
   text-align: center;
   font-size: 36px;
   font-weight: 600;
   color: #111111;
   margin: 0 0 50px 0;
 }
-.reviews__questions {
+.answers__questions {
   display: flex;
   justify-content: start;
   align-items: start;
   gap: 40px;
   flex-direction: column;
 }
-.reviews__questions .question {
+.answers__questions .question {
   display: flex;
   justify-content: start;
   align-items: start;
   gap: 30px;
   flex-direction: column;
 }
-.reviews__questions .question__title {
+.answers__questions .question .toggler__content-open {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  flex-direction: row;
+}
+.answers__questions .question__title {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -472,16 +480,16 @@ figure {
   flex-direction: row;
   cursor: pointer;
 }
-.reviews__questions .question__title i {
+.answers__questions .question__title i {
   color: #f7654a;
 }
-.reviews__questions .question__title .title__direct {
+.answers__questions .question__title .title__direct {
   font-size: 24px;
   font-weight: 500;
   color: #f7654a;
   text-wrap: nowrap;
 }
-.reviews__questions .question__description {
+.answers__questions .question__description {
   max-width: 730px;
   font-size: 16px;
   font-weight: 400;
@@ -513,17 +521,20 @@ figure {
   gap: 64px;
   flex-direction: row;
 }
-.partners-section .partners__wrapper .partner {
-  transition: all 0.32s;
+.partners-section .partners__wrapper .partners__wrapper-item {
+  height: 100%;
+  transition: all 0.33s;
+}
+.partners-section .partners__wrapper .partners__wrapper-item .partner {
+  height: 100%;
   border-radius: 10px;
 }
-.partners-section .partners__wrapper .partner img {
+.partners-section .partners__wrapper .partners__wrapper-item .partner img {
   max-width: 170px;
   height: 60px;
 }
-.partners-section .partners__wrapper .partner:hover {
+.partners-section .partners__wrapper .partners__wrapper-item:hover {
   scale: 1.1;
-  background-color: #f7654a;
 }
 @media (max-width: 1160px) {
   .partners-section .partners__wrapper {
@@ -703,9 +714,9 @@ figure {
 }
 .contacts-section .contacts__content {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 80px;
   flex-direction: row;
 }
 @media (max-width: 1100px) {
@@ -747,6 +758,9 @@ figure {
   font-weight: 500;
   color: #111111;
   font-style: normal;
+}
+.contacts-section .contacts__content .content__block .email-address {
+  color: #f7654a;
 }
 
 .footer {
