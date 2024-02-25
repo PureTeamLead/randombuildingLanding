@@ -287,6 +287,17 @@ figure {
   font-weight: 400;
   color: #c4c4c4;
 }
+@media (max-width: 700px) {
+  .projects__content .wrapper .example {
+    align-items: center;
+  }
+  .projects__content .wrapper .example__paragraph {
+    text-align: center;
+  }
+  .projects__content .wrapper .example__image img {
+    height: 300px;
+  }
+}
 
 .thebar {
   background: #f7654a;
@@ -465,12 +476,17 @@ figure {
   gap: 30px;
   flex-direction: column;
 }
-.answers__questions .question .toggler__content-open {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 16px;
-  flex-direction: row;
+.answers__questions .question .text-toggler {
+  display: none;
+}
+.answers__questions .question .text-toggler:checked ~ .question__description {
+  display: block;
+}
+.answers__questions .question .text-toggler:checked ~ .label .question__title .title__direct {
+  text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+}
+.answers__questions .question .text-toggler:checked ~ .label .question__title .label__arrow {
+  transform: rotate(90deg);
 }
 .answers__questions .question__title {
   display: flex;
@@ -480,7 +496,11 @@ figure {
   flex-direction: row;
   cursor: pointer;
 }
-.answers__questions .question__title i {
+.answers__questions .question__title .label__arrow {
+  display: flex;
+  transition: all 0.33s;
+}
+.answers__questions .question__title .label__arrow i {
   color: #f7654a;
 }
 .answers__questions .question__title .title__direct {
@@ -490,8 +510,9 @@ figure {
   text-wrap: nowrap;
 }
 .answers__questions .question__description {
+  display: none;
   max-width: 730px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   color: #c4c4c4;
 }

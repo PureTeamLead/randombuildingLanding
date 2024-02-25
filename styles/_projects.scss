@@ -56,6 +56,20 @@
 				&__paragraph {
 					@include m.text(16px, 400, v.$font-grey);
 				}
+
+				@media (max-width: 700px) {
+					align-items: center;
+
+					&__paragraph {
+						text-align: center;
+					}
+
+					&__image {
+						img {
+							height: 300px;
+						}
+					}
+				}
 			}
 		}
 	}
